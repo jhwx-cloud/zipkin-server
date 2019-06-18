@@ -1,0 +1,17 @@
+spring:
+  sleuth:
+    sampler:
+      percentage: 0.8 #0.1-1.0 也就是代表链路跟踪的数据上传的概率有多大
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:sanhaoadmin@localhost:40000/eureka/
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    ip-address: true
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
