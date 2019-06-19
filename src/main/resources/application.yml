@@ -1,0 +1,9 @@
+server:
+  port: 40001
+spring:
+  application:
+    name: zipkin-server #注册到注册中心的名字，可以映射ip
+  zipkin:
+    base-url: http://localhost:40001 #代表字zipkin服务器地址
+  profiles:
+    active: test
